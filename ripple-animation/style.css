@@ -1,0 +1,46 @@
+.root {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    position: relative;
+    padding: 10px 20px;
+    background: blueviolet;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    animation: ripple 1s linear infinite;
+    background-color: rgb(256, 256, 226, 75);
+    opacity: 0.6;
+}
+
+@keyframes ripple {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.btn-text {
+    text-transform: uppercase;
+    color: white;
+}
